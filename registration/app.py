@@ -4,6 +4,9 @@ import psycopg2
 
 
 app = Flask(__name__)
+
+# КОД НИЖЕ ВЗЯТ ИЗ ПРЕДЫДУЩЕЙ ПРАКТИЧЕСКОЙ РАБОТЫ
+
 conn = psycopg2.connect(
 	database="service_db", user="postgres", password="password",
 	host="localhost", port="5432"
@@ -25,3 +28,5 @@ def login():
 	records = list(cursor.fetchall())
 
 	return render_template('account.html', full_name=records[0][1])
+
+# YOUR CODE HERE
