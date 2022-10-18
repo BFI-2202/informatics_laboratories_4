@@ -15,12 +15,15 @@
 С использованием пакетного менеджера `poetry`:
 
 ```bash
-poetry run registration
+poetry install && poetry shell
+cd registration
+flask run
 ```
 
 Стандартными средствами `python` (рекомендуется прежде создать отдельное [виртуальное окружение](https://docs.python.org/3/library/venv.html)):
 
 ```bash
 pip3 install -r requirements.txt
-python3 registration
+cd registration
+flask run
 ```
